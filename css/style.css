@@ -920,7 +920,7 @@ p{ margin: 0; }
   color: var(--cream);
   border: none;
   border-radius: var(--radius-pill);
-  padding: 11px 20px;
+  padding: 13px 22px;
   font-weight: 700;
   font-size: 0.85rem;
   transition: background 0.2s ease;
@@ -1117,13 +1117,6 @@ p{ margin: 0; }
   object-fit: cover;
 }
 
-/* Repositioned hero seal + ticket for the about layout */
-.spin-seal--hero{
-  top: -74px;
-  right: 4%;
-  width: 128px;
-  height: 128px;
-}
 .about-ticket{
   bottom: 26px;
   left: 4%;
@@ -2356,8 +2349,8 @@ body.cart-open{ overflow: hidden; }
   justify-self: start;
 }
 .qty button{
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: none;
   background: var(--cream);
@@ -2455,11 +2448,6 @@ body.cart-open{ overflow: hidden; }
   object-fit: contain;
   display: block;
   background: transparent;
-}
-.spin-seal .center-icon img{
-  width: 62%;
-  height: auto;
-  display: block;
 }
 @media (max-width: 780px){
   .logo-img{ height: 40px; }
