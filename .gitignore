@@ -1,0 +1,19 @@
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Editors / tooling ----
+.vscode/
+.idea/
+*.swp
+
+# ---- Local tooling ----
+node_modules/
+*.log
+
+# ---- Full-resolution source photos (not used by the site) ----
+images/founders/backup/
+
+# ---- Python local preview leftovers ----
+__pycache__/

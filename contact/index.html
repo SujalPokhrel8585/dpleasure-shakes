@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<title>Contact Us, D' Pleasure Shakes</title>
+<meta name="description" content="Questions, catering, feedback or a flavor idea, get in touch with D' Pleasure Shakes, or find us at the counter.">
+<meta property="og:title" content="Contact Us — D&rsquo; Pleasure Shakes">
+<meta property="og:description" content="Questions, catering, feedback or a flavor idea, get in touch with D&rsquo; Pleasure Shakes, or find us at the counter in Chabahil.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="stylesheet" href="../css/style.css?v=7">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+ <div class="nav-wrap">
+ <a href="../index.html" class="logo"><img class="logo-img" src="../images/logotype.png" alt="D&rsquo; Pleasure Shakes" width="499" height="200"></a>
+
+ <nav class="nav-links">
+ <a href="../index.html">Home</a>
+ <a href="../menu/">Menu</a>
+ <a href="../about/">About</a>
+ <a href="../contact/" class="active">Contact</a>
+ </nav>
+
+ <div class="nav-actions">
+ <button class="icon-btn" aria-label="View cart">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M6 8h12l-1 12.5a2 2 0 01-2 1.5H9a2 2 0 01-2-1.5L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+ <span class="cart-badge">3</span>
+ </button>
+ <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ </div>
+
+ <nav class="mobile-nav" id="mobileNav">
+ <a href="../index.html">Home</a>
+ <a href="../menu/">Menu</a>
+ <a href="../about/">About</a>
+ <a href="../contact/">Contact</a>
+ </nav>
+</header>
+
+<main id="main">
+
+ <!-- ============ CONTACT HERO, PHOTO + FORM ============ -->
+ <section class="contact-hero">
+ <div class="container contact-grid">
+ <figure class="contact-photo reveal">
+ <img src="https://images.unsplash.com/photo-1568901839119-631418a3910d?auto=format&fit=crop&w=900&q=60" alt="A tall vanilla milkshake finished with chocolate syrup on the counter">
+ <div class="ticket-badge contact-ticket">
+ <div class="tb-label">Counter Cam</div>
+ <div class="tb-name">Blending Now</div>
+ <div class="tb-price">Come watch yours being made</div>
+ </div>
+ </figure>
+
+ <div class="contact-form-wrap reveal">
+ <span class="eyebrow">Contact Us</span>
+ <h1>Say Hello,<br>We&rsquo;re All <span class="highlight highlight-wave">Ears
+ <svg viewBox="0 0 300 20" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M2,14 C60,4 120,20 150,10 C180,2 240,16 298,8" stroke="var(--butter)" stroke-width="7" fill="none" stroke-linecap="round"><animate attributeName="d" dur="2.4s" repeatCount="indefinite" values="M2,14 C60,4 120,20 150,10 C180,2 240,16 298,8; M2,10 C60,18 120,6 150,16 C180,20 240,6 298,12; M2,14 C60,4 120,20 150,10 C180,2 240,16 298,8"/></path></svg>
+ </span></h1>
+ <p class="contact-lede">Questions, catering, feedback, or a flavor idea you think we should steal, drop it here. We read everything, usually between blends.</p>
+
+ <form class="contact-form" id="contactForm" novalidate>
+ <div class="form-row">
+ <div class="field">
+ <label class="field-tag" for="cName">Name</label>
+ <input type="text" id="cName" name="name" placeholder="Jane Doe" autocomplete="name" required>
+ </div>
+ <div class="field">
+ <label class="field-tag" for="cEmail">Email</label>
+ <input type="email" id="cEmail" name="email" placeholder="jane.doe@email.com" autocomplete="email" required>
+ </div>
+ </div>
+
+ <div class="form-row">
+ <div class="field">
+ <label class="field-tag" for="cPhone">Phone <em>(optional)</em></label>
+ <input type="tel" id="cPhone" name="phone" placeholder="+1 555 000 0000" autocomplete="tel">
+ </div>
+ <div class="field">
+ <label class="field-tag" for="cTopic">Topic</label>
+ <select id="cTopic" name="topic">
+ <option value="general" selected>General question</option>
+ <option value="catering">Events &amp; catering</option>
+ <option value="feedback">Feedback</option>
+ <option value="flavor">Flavor idea</option>
+ </select>
+ </div>
+ </div>
+
+ <div class="field field--full">
+ <label class="field-tag" for="cMessage">Message</label>
+ <textarea id="cMessage" name="message" rows="5" placeholder="Tell us everything&hellip;" required></textarea>
+ </div>
+
+ <div class="form-foot">
+ <button type="submit" class="btn btn-primary">Send Message</button>
+ <p class="form-note">We usually reply within 24 hours, faster if you mention the Oreo Eclipse.</p>
+ </div>
+ </form>
+
+ <div class="form-success" id="formSuccess" hidden>
+ <div class="fs-icon" aria-hidden="true">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>
+ </div>
+ <h3>Order Up!</h3>
+ <p>Your message is on the counter. We&rsquo;ll get back to you within 24 hours, thanks for reaching out.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ============ DRIP: cream → plum ============ -->
+ <div class="drip drip--to-plum" aria-hidden="true">
+ <svg viewBox="0 0 1200 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 C18,0 12,46 50,46 C88,46 82,0 100,0 C118,0 112,22 150,22 C188,22 182,0 200,0 C218,0 212,58 250,58 C288,58 282,0 300,0 C318,0 312,30 350,30 C388,30 382,0 400,0 C418,0 412,50 450,50 C488,50 482,0 500,0 C518,0 512,20 550,20 C588,20 582,0 600,0 C618,0 612,62 650,62 C688,62 682,0 700,0 C718,0 712,34 750,34 C788,34 782,0 800,0 C818,0 812,44 850,44 C888,44 882,0 900,0 C918,0 912,26 950,26 C988,26 982,0 1000,0 C1018,0 1012,56 1050,56 C1088,56 1082,0 1100,0 C1118,0 1112,20 1150,20 C1188,20 1182,0 1200,0 V0 H0 Z"/></svg>
+ </div>
+
+ <!-- ============ FAQ ============ -->
+ <section class="section on-dark">
+ <div class="container">
+ <div class="section-heading section-heading--center reveal">
+ <span class="eyebrow">Good To Know</span>
+ <h2>Asked At The Counter</h2>
+ <p class="section-sub section-sub--dark">The questions we hear most between blends, answered before you even ask.</p>
+ </div>
+
+ <div class="faq-list reveal">
+ <div class="faq-item is-open">
+ <button class="faq-q" id="faqQ1" aria-expanded="true" aria-controls="faqA1">
+ <span>Are your shakes really made from scratch?</span>
+ <span class="faq-icon" aria-hidden="true">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+ </span>
+ </button>
+ <div class="faq-a" id="faqA1" role="region" aria-labelledby="faqQ1">
+ <div class="faq-a-inner">
+ <p>Every single glass. Real fruit cut that morning, cream poured by hand, syrups measured to the milliliter, nothing pre mixed, nothing from a packet. Your blender starts when your name gets called.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-q" id="faqQ2" aria-expanded="false" aria-controls="faqA2">
+ <span>Do you deliver?</span>
+ <span class="faq-icon" aria-hidden="true">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+ </span>
+ </button>
+ <div class="faq-a" id="faqA2" role="region" aria-labelledby="faqQ2">
+ <div class="faq-a-inner">
+ <p>Yes, sealed, packed with ice, and at your door within about 30 minutes of the counter. If it shows up anything less than ice cold, it&rsquo;s on the house.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-q" id="faqQ3" aria-expanded="false" aria-controls="faqA3">
+ <span>Can I book the counter for a birthday or event?</span>
+ <span class="faq-icon" aria-hidden="true">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+ </span>
+ </button>
+ <div class="faq-a" id="faqA3" role="region" aria-labelledby="faqQ3">
+ <div class="faq-a-inner">
+ <p>Absolutely. Send us the date, the headcount, and your flavor picks through the form above, and we&rsquo;ll set up the counter for your crowd.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-q" id="faqQ4" aria-expanded="false" aria-controls="faqA4">
+ <span>Got any dairy free options?</span>
+ <span class="faq-icon" aria-hidden="true">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+ </span>
+ </button>
+ <div class="faq-a" id="faqA4" role="region" aria-labelledby="faqQ4">
+ <div class="faq-a-inner">
+ <p>Several of our fruit coolers, like the Ruby Lemonade and the Lemon Kissed Watermelon, are naturally dairy free. Ask at the counter and we&rsquo;ll point you right.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-q" id="faqQ5" aria-expanded="false" aria-controls="faqA5">
+ <span>Do you take reservations?</span>
+ <span class="faq-icon" aria-hidden="true">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+ </span>
+ </button>
+ <div class="faq-a" id="faqA5" role="region" aria-labelledby="faqQ5">
+ <div class="faq-a-inner">
+ <p>We keep plenty of stools open for walk ins every single day. Want a guaranteed spot? Call us at +977 9815059360 and we will save one for you.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-q" id="faqQ6" aria-expanded="false" aria-controls="faqA6">
+ <span>How often does the menu change?</span>
+ <span class="faq-icon" aria-hidden="true">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+ </span>
+ </button>
+ <div class="faq-a" id="faqA6" role="region" aria-labelledby="faqQ6">
+ <div class="faq-a-inner">
+ <p>With the seasons. A rotating lineup of coolers and blends lands as the fruit does, the seven signatures, though, never leave the board.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ============ DRIP: plum → cream-2 ============ -->
+ <div class="drip drip--to-cream2" aria-hidden="true">
+ <svg viewBox="0 0 1200 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 C18,0 12,46 50,46 C88,46 82,0 100,0 C118,0 112,22 150,22 C188,22 182,0 200,0 C218,0 212,58 250,58 C288,58 282,0 300,0 C318,0 312,30 350,30 C388,30 382,0 400,0 C418,0 412,50 450,50 C488,50 482,0 500,0 C518,0 512,20 550,20 C588,20 582,0 600,0 C618,0 612,62 650,62 C688,62 682,0 700,0 C718,0 712,34 750,34 C788,34 782,0 800,0 C818,0 812,44 850,44 C888,44 882,0 900,0 C918,0 912,26 950,26 C988,26 982,0 1000,0 C1018,0 1012,56 1050,56 C1088,56 1082,0 1100,0 C1118,0 1112,20 1150,20 C1188,20 1182,0 1200,0 V0 H0 Z"/></svg>
+ </div>
+
+ <!-- ============ FIND US, INFO CARDS + CTA ============ -->
+ <section class="section section--tight on-cream2">
+ <div class="container">
+ <div class="section-heading reveal">
+ <span class="eyebrow">Or Skip The Inbox</span>
+ <h2>Find Us At The Counter</h2>
+ </div>
+
+ <div class="find-grid">
+ <div class="map-box reveal">
+  <iframe
+   src="https://www.google.com/maps?q=Chabahil,+Kathmandu,+Nepal&z=15&output=embed"
+   title="Find D&rsquo; Pleasure Shakes in Chabahil, Kathmandu"
+   loading="lazy"
+   allowfullscreen
+   referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <span class="map-tag">Counter Cam, But For Maps</span>
+ </div>
+ <div class="info-cards reveal">
+ <div class="info-card">
+ <div class="feature-icon feature-icon--light">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+ </div>
+ <h4>Visit</h4>
+ <p>Chabahil<br>Kathmandu, Nepal</p>
+ </div>
+ <div class="info-card">
+ <div class="feature-icon feature-icon--light">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+ </div>
+ <h4>Call</h4>
+ <p>Call or WhatsApp<br>+977 9815059360</p>
+ </div>
+ <div class="info-card">
+ <div class="feature-icon feature-icon--light">
+ <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+ </div>
+ <h4>Write</h4>
+ <p>inquiry@dpleasureshakes.com<br>Replies within 24h</p>
+ </div>
+ <div class="info-card">
+ <div class="feature-icon feature-icon--light">
+ <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+ </div>
+ <h4>Hours</h4>
+ <p>Mon &ndash; Thu &bull; 11am &ndash; 9pm<br>Fri &ndash; Sat &bull; 11am &ndash; 11pm<br>Sun &bull; 10am &ndash; 8pm</p>
+ </div>
+ </div>
+
+ </div>
+ <div class="cta-banner reveal">
+ <h2>Prefer A Stool To A Send Button?</h2>
+ <p>Bring your questions to the counter in Chabahil, the first sip is on the straw, the answers are on us.</p>
+ <a href="../menu/" class="btn btn-dark">View The Menu</a>
+ </div>
+ </div>
+ </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+ <div class="container footer-top">
+ <div class="footer-brand">
+ <a href="../index.html" class="logo">
+ <span class="logo-mark"><img src="../images/logo.png" alt="" width="286" height="300"></span>
+ D&rsquo; Pleasure
+ </a>
+ <p>A soda fountain built on real fruit, real cream, and shakes thick enough to need a spoon.</p>
+ <div class="footer-social">
+ <a href="#" aria-label="Facebook">
+ <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M15 8h2V5h-2a4 4 0 00-4 4v2H9v3h2v7h3v-7h2.5l.5-3H14V9a1 1 0 011-1z"/></svg>
+ </a>
+ <a href="#" aria-label="Instagram">
+ <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+ </a>
+ <a href="#" aria-label="Twitter">
+ <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M22 5.9c-.7.3-1.5.6-2.3.7a4 4 0 001.7-2.2c-.8.5-1.7.8-2.6 1a4 4 0 00-6.9 3.6A11.4 11.4 0 013 4.6a4 4 0 001.2 5.3c-.6 0-1.2-.2-1.7-.5v.1a4 4 0 003.2 3.9c-.6.1-1.2.2-1.8.1a4 4 0 003.7 2.7A8 8 0 012 18.4a11.3 11.3 0 006.1 1.8c7.4 0 11.4-6.1 11.4-11.4v-.5c.8-.6 1.4-1.3 1.9-2.1z" fill="currentColor" stroke="none"/></svg>
+ </a>
+ </div>
+ </div>
+
+ <div class="footer-col">
+ <h5>Quick Links</h5>
+ <ul>
+ <li><a href="../index.html">Home</a></li>
+ <li><a href="../menu/">Menu</a></li>
+ <li><a href="../about/">About</a></li>
+ <li><a href="../contact/">Contact</a></li>
+ </ul>
+ </div>
+
+ <div class="footer-col">
+ <h5>Contact</h5>
+ <ul>
+ <li>Chabahil, Kathmandu</li>
+ <li>+977 9815059360</li>
+ <li>inquiry@dpleasureshakes.com</li>
+ </ul>
+ </div>
+
+ <div class="footer-col">
+ <h5>Opening Hours</h5>
+ <div class="hours-row"><span>Mon – Thu</span><span>11am – 9pm</span></div>
+ <div class="hours-row"><span>Fri – Sat</span><span>11am – 11pm</span></div>
+ <div class="hours-row"><span>Sunday</span><span>10am – 8pm</span></div>
+
+ <h5 style="margin-top:26px;">Newsletter</h5>
+ <form class="newsletter-form" onsubmit="return false;">
+ <input type="email" placeholder="Your email" aria-label="Email for newsletter" required>
+ <button type="submit">Join</button>
+ </form>
+ </div>
+ </div>
+
+ <div class="footer-wordmark" aria-hidden="true">D&rsquo;PLEASURE</div>
+
+ <div class="footer-bottom">
+    © 2026 D&rsquo; Pleasure Shakes. All rights reserved.
+ </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Your order tray">
+ <div class="cart-head">
+ <div>
+ <span class="eyebrow">Order Ticket</span>
+ <h3>Your Tray</h3>
+ </div>
+ <button class="cart-close" id="cartClose" aria-label="Close cart">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+ </button>
+ </div>
+ <div class="cart-items" id="cartItems"></div>
+ <div class="cart-foot">
+ <div class="cart-total-row"><span>Total</span><span id="cartTotal">Rs. 0</span></div>
+ <p class="cart-note">Pay at the counter or on delivery, no prepayment needed.</p>
+ <a class="btn btn-primary cart-wa" id="cartWhatsapp" href="#" target="_blank" rel="noopener">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 01-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1121 11.5z"/></svg>
+ Send Order on WhatsApp
+ </a>
+ </div>
+</aside>
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg class="icon" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7-7"/></svg>
+</button>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

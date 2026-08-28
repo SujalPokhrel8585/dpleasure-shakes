@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — D' Pleasure Shakes</title>
+<meta name="description" content="Looks like you sipped something that doesn't exist. Slide back to the counter and feast on some real shakes.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<meta property="og:title" content="404 — D&rsquo; Pleasure Shakes">
+<meta property="og:description" content="Looks like you sipped something that doesn't exist.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/css/style.css?v=7">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-wrap">
+    <a href="/" class="logo"><img class="logo-img" src="/images/logotype.png" alt="D&rsquo; Pleasure Shakes" width="499" height="200"></a>
+
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/menu/">Menu</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="View cart">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M6 8h12l-1 12.5a2 2 0 01-2 1.5H9a2 2 0 01-2-1.5L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/">Home</a>
+    <a href="/menu/">Menu</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ 404 ============ -->
+  <section class="nf-section">
+    <div class="nf-float nf-float--1" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=300&q=60" alt="">
+    </div>
+    <div class="nf-float nf-float--2" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=300&q=60" alt="">
+    </div>
+    <div class="nf-float nf-float--3" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1560508180-03f285f67ded?auto=format&fit=crop&w=300&q=60" alt="">
+    </div>
+    <div class="nf-float nf-float--4" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1783705956680-195b93288b17?auto=format&fit=crop&w=300&q=60" alt="">
+    </div>
+
+    <div class="nf-copy reveal">
+      <span class="eyebrow">Uh Oh</span>
+      <div class="nf-giant" data-text="404" aria-hidden="true">404</div>
+      <h1 class="nf-title">Wrong Counter, Friend</h1>
+      <p class="nf-lede">Looks like you sipped something that doesn&rsquo;t exist. Not much here. Slide back to the counter and feast on some real shakes.</p>
+      <div class="hero-ctas nf-ctas">
+        <a href="/menu/" class="btn btn-primary">Back To The Menu</a>
+        <a href="/" class="btn btn-outline">Go Home</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Your order tray">
+ <div class="cart-head">
+ <div>
+ <span class="eyebrow">Order Ticket</span>
+ <h3>Your Tray</h3>
+ </div>
+ <button class="cart-close" id="cartClose" aria-label="Close cart">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+ </button>
+ </div>
+ <div class="cart-items" id="cartItems"></div>
+ <div class="cart-foot">
+ <div class="cart-total-row"><span>Total</span><span id="cartTotal">Rs. 0</span></div>
+ <p class="cart-note">Pay at the counter or on delivery, no prepayment needed.</p>
+ <a class="btn btn-primary cart-wa" id="cartWhatsapp" href="#" target="_blank" rel="noopener">
+ <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 01-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1121 11.5z"/></svg>
+ Send Order on WhatsApp
+ </a>
+ </div>
+</aside>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <a href="/" class="logo">
+        <span class="logo-mark"><img src="/images/logo.png" alt="" width="286" height="300"></span>
+        D&rsquo; Pleasure
+      </a>
+      <p>A soda fountain built on real fruit, real cream, and shakes thick enough to need a spoon.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M15 8h2V5h-2a4 4 0 00-4 4v2H9v3h2v7h3v-7h2.5l.5-3H14V9a1 1 0 011-1z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M22 5.9c-.7.3-1.5.6-2.3.7a4 4 0 001.7-2.2c-.8.5-1.7.8-2.6 1a4 4 0 00-6.9 3.6A11.4 11.4 0 013 4.6a4 4 0 001.2 5.3c-.6 0-1.2-.2-1.7-.5v.1a4 4 0 003.2 3.9c-.6.1-1.2.2-1.8.1a4 4 0 003.7 2.7A8 8 0 012 18.4a11.3 11.3 0 006.1 1.8c7.4 0 11.4-6.1 11.4-11.4v-.5c.8-.6 1.4-1.3 1.9-2.1z" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu/">Menu</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li>Chabahil, Kathmandu</li>
+        <li>+977 9815059360</li>
+        <li>inquiry@dpleasureshakes.com</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Opening Hours</h5>
+      <div class="hours-row"><span>Mon – Thu</span><span>11am – 9pm</span></div>
+      <div class="hours-row"><span>Fri – Sat</span><span>11am – 11pm</span></div>
+      <div class="hours-row"><span>Sunday</span><span>10am – 8pm</span></div>
+
+      <h5 style="margin-top:26px;">Newsletter</h5>
+      <form class="newsletter-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email" aria-label="Email for newsletter" required>
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-wordmark" aria-hidden="true">D&rsquo;PLEASURE</div>
+
+  <div class="footer-bottom">
+    © 2026 D&rsquo; Pleasure Shakes. All rights reserved.
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg class="icon" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7-7"/></svg>
+</button>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
