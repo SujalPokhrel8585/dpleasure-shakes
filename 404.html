@@ -9,7 +9,7 @@
       content="Looks like you sipped something that doesn't exist. Slide back to the counter and feast on some real shakes."
     />
     <meta name="robots" content="noindex" />
-    <!-- UNIVERSAL FIX: Tells browser to resolve all assets from true root -->
+    <!-- UNIVERSAL BASE: Starts at root, fixed by JS below for GH Pages -->
     <base href="/" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
@@ -43,7 +43,6 @@
     <!-- ============ HEADER ============ -->
     <header class="site-header" id="siteHeader">
       <div class="nav-wrap">
-        <!-- Note: hrefs use absolute paths, fixed by JS below for GH Pages -->
         <a href="/" class="logo"
           ><img
             class="logo-img"
