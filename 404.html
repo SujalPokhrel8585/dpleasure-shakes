@@ -6,20 +6,45 @@
     <title>404 — D' Pleasure Shakes</title>
     <meta
       name="description"
-      content="Looks like you sipped something that doesn't exist."
+      content="Looks like you sipped something that doesn't exist. Slide back to the counter and feast on some real shakes."
     />
     <meta name="robots" content="noindex" />
+    <meta property="og:title" content="404 — D&rsquo; Pleasure Shakes" />
+    <meta
+      property="og:description"
+      content="Looks like you sipped something that doesn't exist."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.dpleasureshakes.com/images/og-cover.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="404 — D&rsquo; Pleasure Shakes" />
+    <meta
+      name="twitter:image"
+      content="https://www.dpleasureshakes.com/images/og-cover.jpg"
+    />
+    <meta name="theme-color" content="#FFF6EA" />
 
-    <!-- CRITICAL: This runs BEFORE CSS loads -->
+    <!-- BULLETPROOF BASE PATH INJECTION -->
+    <!-- This runs synchronously before the browser parses any links or stylesheets -->
     <script>
-      var repoPath = "/dpleasure-shakes";
-      var base = document.createElement("base");
-      base.href = repoPath + "/";
-      document.head.appendChild(base);
+      var path = window.location.pathname;
+      var base =
+        path.indexOf("/dpleasure-shakes/") !== -1 ? "/dpleasure-shakes/" : "/";
+      document.write('<base href="' + base + '">');
     </script>
 
-    <link rel="stylesheet" href="/css/style.css?v=8" />
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <!-- Notice: No leading slash. It will use the base tag injected above. -->
+    <link rel="stylesheet" href="css/style.css?v=8" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -27,20 +52,20 @@
     <!-- ============ HEADER ============ -->
     <header class="site-header" id="siteHeader">
       <div class="nav-wrap">
-        <a href="/" class="logo"
+        <a href="index.html" class="logo"
           ><img
             class="logo-img"
-            src="/images/logotype.png"
+            src="images/logotype.png"
             alt="D&rsquo; Pleasure Shakes"
             width="499"
             height="200"
         /></a>
 
         <nav class="nav-links">
-          <a href="/">Home</a>
-          <a href="/menu/">Menu</a>
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="menu/">Menu</a>
+          <a href="about/">About</a>
+          <a href="contact/">Contact</a>
         </nav>
 
         <div class="nav-actions">
@@ -63,10 +88,10 @@
       </div>
 
       <nav class="mobile-nav" id="mobileNav">
-        <a href="/">Home</a>
-        <a href="/menu/">Menu</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="menu/">Menu</a>
+        <a href="about/">About</a>
+        <a href="contact/">Contact</a>
       </nav>
     </header>
 
@@ -107,8 +132,8 @@
             here. Slide back to the counter and feast on some real shakes.
           </p>
           <div class="hero-ctas nf-ctas">
-            <a href="/menu/" class="btn btn-primary">Back To The Menu</a>
-            <a href="/" class="btn btn-outline">Go Home</a>
+            <a href="menu/" class="btn btn-primary">Back To The Menu</a>
+            <a href="index.html" class="btn btn-outline">Go Home</a>
           </div>
         </div>
       </section>
@@ -163,9 +188,9 @@
     <footer class="site-footer">
       <div class="container footer-top">
         <div class="footer-brand">
-          <a href="/" class="logo">
+          <a href="index.html" class="logo">
             <span class="logo-mark"
-              ><img src="/images/logo.png" alt="" width="286" height="300"
+              ><img src="images/logo.png" alt="" width="286" height="300"
             /></span>
             D&rsquo; Pleasure
           </a>
@@ -215,10 +240,10 @@
         <div class="footer-col">
           <h5>Quick Links</h5>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/menu/">Menu</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/contact/">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu/">Menu</a></li>
+            <li><a href="about/">About</a></li>
+            <li><a href="contact/">Contact</a></li>
           </ul>
         </div>
 
@@ -269,6 +294,7 @@
       </svg>
     </button>
 
-    <script src="/js/script.js"></script>
+    <!-- Notice: No leading slash for JS either -->
+    <script src="js/script.js"></script>
   </body>
 </html>
