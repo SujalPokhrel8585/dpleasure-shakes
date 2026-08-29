@@ -23,6 +23,11 @@ Any static server from this folder works:
 ```
 python -m http.server 8080
 ```
+Hosting LInk:
+
+https://dpleasure-shakes.vercel.app/
+
+https://sujalpokhrel8585.github.io/dpleasure-shakes/
 
 Then open http://localhost:8080
 
