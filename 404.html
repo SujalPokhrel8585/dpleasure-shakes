@@ -6,50 +6,20 @@
     <title>404 — D' Pleasure Shakes</title>
     <meta
       name="description"
-      content="Looks like you sipped something that doesn't exist. Slide back to the counter and feast on some real shakes."
+      content="Looks like you sipped something that doesn't exist."
     />
     <meta name="robots" content="noindex" />
 
-    <!-- UNIVERSAL BASE FIX: This script runs instantly to set the correct path for both Vercel and GitHub -->
+    <!-- CRITICAL: This runs BEFORE CSS loads -->
     <script>
-      (function () {
-        var path = window.location.pathname;
-        var baseHref = "/";
-        // If we are on GitHub Pages (URL contains the repo name), use that subdirectory
-        if (path.indexOf("/dpleasure-shakes/") !== -1) {
-          baseHref = "/dpleasure-shakes/";
-        }
-        var base = document.createElement("base");
-        base.href = baseHref;
-        document.head.appendChild(base);
-      })();
+      var repoPath = "/dpleasure-shakes";
+      var base = document.createElement("base");
+      base.href = repoPath + "/";
+      document.head.appendChild(base);
     </script>
 
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
-    <meta property="og:title" content="404 — D&rsquo; Pleasure Shakes" />
-    <meta
-      property="og:description"
-      content="Looks like you sipped something that doesn't exist."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://www.dpleasureshakes.com/images/og-cover.jpg"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="404 — D&rsquo; Pleasure Shakes" />
-    <meta
-      name="twitter:image"
-      content="https://www.dpleasureshakes.com/images/og-cover.jpg"
-    />
-    <meta name="theme-color" content="#FFF6EA" />
     <link rel="stylesheet" href="/css/style.css?v=8" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
