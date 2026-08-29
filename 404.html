@@ -9,6 +9,8 @@
       content="Looks like you sipped something that doesn't exist. Slide back to the counter and feast on some real shakes."
     />
     <meta name="robots" content="noindex" />
+    <!-- UNIVERSAL FIX: Tells browser to resolve all assets from true root -->
+    <base href="/" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
@@ -33,7 +35,6 @@
       content="https://www.dpleasureshakes.com/images/og-cover.jpg"
     />
     <meta name="theme-color" content="#FFF6EA" />
-    <!-- FIXED: Absolute path to CSS so it loads from any fake URL -->
     <link rel="stylesheet" href="/css/style.css?v=8" />
   </head>
   <body>
@@ -42,7 +43,7 @@
     <!-- ============ HEADER ============ -->
     <header class="site-header" id="siteHeader">
       <div class="nav-wrap">
-        <!-- FIXED: Absolute paths for logo and navigation -->
+        <!-- Note: hrefs use absolute paths, fixed by JS below for GH Pages -->
         <a href="/" class="logo"
           ><img
             class="logo-img"
@@ -285,7 +286,28 @@
       </svg>
     </button>
 
-    <!-- FIXED: Absolute path to JS so cart functionality works on 404 page -->
     <script src="/js/script.js"></script>
+
+    <!-- UNIVERSAL LINK FIXER FOR GITHUB PAGES -->
+    <script>
+      // Detect if we are on GitHub Pages (URL contains repo name)
+      if (window.location.pathname.includes("/dpleasure-shakes/")) {
+        const prefix = "/dpleasure-shakes";
+
+        // Fix all anchor tags
+        document.querySelectorAll('a[href^="/"]').forEach((a) => {
+          const href = a.getAttribute("href");
+          if (!href.startsWith(prefix)) {
+            a.setAttribute("href", prefix + href);
+          }
+        });
+
+        // Fix base tag for assets
+        const base = document.querySelector("base");
+        if (base && !base.getAttribute("href").includes(prefix)) {
+          base.setAttribute("href", prefix + "/");
+        }
+      }
+    </script>
   </body>
 </html>
