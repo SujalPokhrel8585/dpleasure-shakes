@@ -1,4 +1,4 @@
-# D' Pleasure Shakes — Website
+# D' Pleasure Shakes | Website
 
 Static site for D' Pleasure Shakes, Chabahil, Kathmandu.
 Pure HTML / CSS / JavaScript — no build step, no dependencies.
