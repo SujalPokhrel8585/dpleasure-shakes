@@ -9,8 +9,22 @@
       content="Looks like you sipped something that doesn't exist. Slide back to the counter and feast on some real shakes."
     />
     <meta name="robots" content="noindex" />
-    <!-- UNIVERSAL BASE: Starts at root, fixed by JS below for GH Pages -->
-    <base href="/" />
+
+    <!-- UNIVERSAL BASE FIX: This script runs instantly to set the correct path for both Vercel and GitHub -->
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var baseHref = "/";
+        // If we are on GitHub Pages (URL contains the repo name), use that subdirectory
+        if (path.indexOf("/dpleasure-shakes/") !== -1) {
+          baseHref = "/dpleasure-shakes/";
+        }
+        var base = document.createElement("base");
+        base.href = baseHref;
+        document.head.appendChild(base);
+      })();
+    </script>
+
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
@@ -286,27 +300,5 @@
     </button>
 
     <script src="/js/script.js"></script>
-
-    <!-- UNIVERSAL LINK FIXER FOR GITHUB PAGES -->
-    <script>
-      // Detect if we are on GitHub Pages (URL contains repo name)
-      if (window.location.pathname.includes("/dpleasure-shakes/")) {
-        const prefix = "/dpleasure-shakes";
-
-        // Fix all anchor tags
-        document.querySelectorAll('a[href^="/"]').forEach((a) => {
-          const href = a.getAttribute("href");
-          if (!href.startsWith(prefix)) {
-            a.setAttribute("href", prefix + href);
-          }
-        });
-
-        // Fix base tag for assets
-        const base = document.querySelector("base");
-        if (base && !base.getAttribute("href").includes(prefix)) {
-          base.setAttribute("href", prefix + "/");
-        }
-      }
-    </script>
   </body>
 </html>
