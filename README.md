@@ -1,61 +1,109 @@
-# D' Pleasure Shakes | Website
+# D' Pleasure Shakes | Official Website
 
-Static site for D' Pleasure Shakes, Chabahil, Kathmandu.
-Pure HTML / CSS / JavaScript — no build step, no dependencies.
+A premium, hand-blended soda fountain experience built for the web.
+This is a high-performance, fully responsive static website built with pure HTML, CSS, and JavaScript. No build steps, no frameworks, no dependencies.
 
-## Structure
+## Live Links
 
-```
-/index.html            Home
-/menu/index.html       Menu      →  /menu/
-/about/index.html      About     →  /about/
-/contact/index.html    Contact   →  /contact/
-/404.html              Not-found page (served automatically by GitHub Pages / Vercel)
-/css/style.css         All styles (design tokens at the top)
-/js/script.js          All behavior (cart drawer, WhatsApp checkout, animations)
-/images/               Brand assets + founder photos
-```
+- **Vercel (Primary):** https://dpleasure-shakes.vercel.app/
+- **GitHub Pages (Mirror):** https://sujalpokhrel8585.github.io/dpleasure-shakes/
 
-## Run locally
+---
 
-Any static server from this folder works:
+## Project Structure
 
-```
-python -m http.server 8080
-```
-Hosting LInk:
+- `/index.html` : Home page
+- `/404.html` : Custom 404 page (Auto-adapts to Vercel & GitHub Pages)
+- `/_redirects` : Vercel routing rule for 404 fallback
+- `/vercel.json` : Vercel configuration
+- `/.nojekyll` : Bypasses Jekyll processing on GitHub Pages
+- `/robots.txt` : SEO crawler instructions
+- `/sitemap.xml` : SEO sitemap
+- `/site.webmanifest` : PWA manifest for mobile installation
+- `/about/index.html` : About page (Clean URL: /about/)
+- `/contact/index.html` : Contact page (Clean URL: /contact/)
+- `/menu/index.html` : Menu page (Clean URL: /menu/)
+- `/css/style.css` : All styles, design tokens, and animations
+- `/js/script.js` : Cart logic, WhatsApp checkout, UI interactions
+- `/images/` : Brand assets, photos, and icons
 
-https://dpleasure-shakes.vercel.app/
+---
 
-https://sujalpokhrel8585.github.io/dpleasure-shakes/
+## Local Development
 
-Then open http://localhost:8080
+Since this is a pure static site, you can run it using any local server.
 
-## Orders
+**Option 1: Python (Built-in)**
+Open your terminal in the project root and run:
+`python -m http.server 8080`
+Then open http://localhost:8080 in your browser.
 
-The cart drawer collects items client-side (localStorage) and hands the
-order to WhatsApp at +977 9815059360 with the itemized message pre-filled.
-No backend required. To change the number, edit `WHATSAPP_NUMBER` in
-`js/script.js`.
+**Option 2: VS Code Live Server**
+If you use Visual Studio Code, install the "Live Server" extension, right-click `index.html`, and select "Open with Live Server".
 
-## Deploy
+---
 
-### GitHub Pages
-1. Push this repo to GitHub.
-2. Repo → Settings → Pages → Source: *Deploy from a branch* → branch `main`, folder `/ (root)`.
-3. `.nojekyll` is already included, so the clean folder URLs serve as-is.
-4. Done: `https://<username>.github.io/<repo-name>/`
+## Deployment Guide
 
-> Project-site note: if the site lives under `/repo-name/`, update the
-> root-absolute links inside `404.html` (e.g. `/menu/` → `/repo-name/menu/`).
-> All other pages use relative links and need nothing.
+This project is configured to deploy seamlessly to both Vercel and GitHub Pages simultaneously.
 
-### Vercel
-Import the repo at vercel.com — no configuration needed, it detects the
-static site and honors `404.html` automatically.
+### Deploying to Vercel (Recommended for Speed)
 
-## Editing content
+1. Import the repository at vercel.com.
+2. Set Framework Preset to `Other`.
+3. Leave Build and Output settings blank.
+4. Click Deploy.
+   _(Note: Vercel automatically uses the `_redirects` file to serve the custom `404.html` for missing routes.)_
 
-- Menu items and prices: `menu/index.html` cards + the `CATALOG` map in `js/script.js`
-- Opening hours / contact info: each page's footer + contact page info cards
-- Colors / fonts: the `:root` tokens at the top of `css/style.css`
+### Deploying to GitHub Pages
+
+1. Push the code to your GitHub repository.
+2. Go to Settings > Pages.
+3. Set Source to "Deploy from a branch", select branch `main`, and folder `/ (root)`.
+4. Click Save.
+   _(Note: The `.nojekyll` file is included to ensure GitHub Pages serves the clean folder URLs correctly.)_
+
+### The Universal 404 Page
+
+The `404.html` page features a dynamic base-path injection script.
+
+- On Vercel (root domain), it resolves assets from `/`.
+- On GitHub Pages (subdirectory `/repo-name/`), it automatically detects the path and prepends the repo name to all CSS, JS, and navigation links.
+  _You never need to manually update paths in the 404 file when switching hosts._
+
+---
+
+## Orders & WhatsApp Checkout
+
+The site features a fully client-side shopping cart.
+
+- Items are saved in the browser's localStorage.
+- When the user checks out, it generates a pre-filled WhatsApp message and sends it to the business number.
+- No backend or database is required.
+
+To change the business phone number, open `js/script.js` and update this variable:
+`const WHATSAPP_NUMBER = '9779815059360';`
+
+---
+
+## Editing Content
+
+- **Menu Items & Prices:** Visual cards in `menu/index.html` + the `CATALOG` object at the top of `js/script.js`.
+- **Opening Hours & Contact Info:** Located in the `<footer>` of every page and the info cards on the Contact page.
+- **Colors, Fonts & Spacing:** All design tokens (CSS variables) are located at the very top of `css/style.css` under the `:root` selector.
+- **Images:** Replace files in the `/images/` directory. Ensure you maintain the same file names or update the `src` attributes in the HTML.
+
+---
+
+## Key Features
+
+- **Mobile-First Responsive:** Flawless experience from iPhone SE to 4K desktops.
+- **Custom Animations:** Scroll reveals, hover states, marquee tickers, and floating elements.
+- **Accessibility (a11y):** Semantic HTML5, ARIA labels, keyboard navigation support, and prefers-reduced-motion respect.
+- **SEO Optimized:** Meta tags, Open Graph tags, Twitter cards, sitemap, and robots.txt included.
+- **Zero Dependencies:** Loads instantly with no external JavaScript libraries.
+
+---
+
+Built with love by Sujal Pokhrel  
+© 2026 D’ Pleasure Shakes. All rights reserved.
